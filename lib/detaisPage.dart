@@ -10,9 +10,14 @@ class detailsPage extends StatefulWidget {
 class _detailsPageState extends State<detailsPage> {
   @override
   Widget build(BuildContext context) {
+    Size mq = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
+        leading: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(Icons.arrow_back)),
         actions: [
           Row(
             children: [
@@ -35,7 +40,13 @@ class _detailsPageState extends State<detailsPage> {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
-            children: [],
+            children: [
+              Container(
+                width: mq.width * 9,
+                height: 150,
+                color: Colors.amber,
+              )
+            ],
           ),
         ),
       ),
