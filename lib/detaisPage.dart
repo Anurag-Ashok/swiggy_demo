@@ -19,12 +19,25 @@ class _detailsPageState extends State<detailsPage> {
               Icon(
                 Icons.favorite,
               ),
+              SizedBox(
+                width: 10,
+              ),
               Icon(
                 Icons.share,
+              ),
+              SizedBox(
+                width: 10,
               ),
             ],
           )
         ],
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [],
+          ),
+        ),
       ),
     );
   }
